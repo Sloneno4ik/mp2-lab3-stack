@@ -1,6 +1,6 @@
 #pragma once
 
-
+#include "math.h"
 #include <string>
 #include "stack.h"
 class TCalculator {

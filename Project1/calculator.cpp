@@ -96,11 +96,11 @@ double TCalculator::Calc() {
 			case '/':
 				rez = op1 / op2;
 				st_d.Push(rez);
-				break;/*
+				break;
 			case '^':
 				double rez = op1 + op2;
 				st_d.Push(rez);
-				break;*/
+				break;
 			default: throw postfix[i];
 			}
 		}

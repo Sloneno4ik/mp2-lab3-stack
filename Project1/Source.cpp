@@ -1,14 +1,25 @@
 #include <string>
-
-#include "calculator.cpp"
+#include <iostream>
+#include "calculator.h"
 using namespace std;
-void main()
+int main()
 {
-	TCalculator C;
-	string expr;
-	cin >> expr;
-	C.SetExpr(expr);
-	C.ToPostfix();
-	cout << C.GetPostfix();
-	cout << C.Calc();
+	
+		try {
+			
+				TCalculator C;
+				string test_string;
+				getline(cin, test_string);
+				C.SetExpr(test_string);
+				C.ToPostfix();
+				cout << C.Calc() << endl;
+			
+		}
+		catch (char* e)
+		{
+			cout << e << endl;
+		}
+		system("pause");
+		return 0;
+	
 }
