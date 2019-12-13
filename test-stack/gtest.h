@@ -1,6 +1,7 @@
+#define _SILENCE_TR1_NAMESPACE_DEPRECATION_WARNING
 // Copyright 2005, Google Inc.
 // All rights reserved.
-//
+//#define _SILENCE_TR1_NAMESPACE_DEPRECATION_WARNING
 // Redistribution and use in source and binary forms, with or without
 // modification, are permitted provided that the following conditions are
 // met:
@@ -47,7 +48,7 @@
 // Acknowledgment: Google Test borrowed the idea of automatic test
 // registration from Barthelemy Dagenais' (barthelemy@prologique.com)
 // easyUnit framework.
-#define _SILENCE_TR1_NAMESPACE_DEPRECATION_WARNING
+//#define _SILENCE_TR1_NAMESPACE_DEPRECATION_WARNING
 #define _VARIADIC_MAX 10
 
 #ifndef GTEST_INCLUDE_GTEST_GTEST_H_

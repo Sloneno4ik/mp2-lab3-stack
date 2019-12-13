@@ -5,20 +5,17 @@ using namespace std;
 int main()
 {
 	
-		try {
+		
 			
 				TCalculator C;
 				string test_string;
 				getline(cin, test_string);
 				C.SetExpr(test_string);
 				C.ToPostfix();
+				cout << C.GetPostfix() << endl;
 				cout << C.Calc() << endl;
 			
-		}
-		catch (char* e)
-		{
-			cout << e << endl;
-		}
+		
 		system("pause");
 		return 0;
 	

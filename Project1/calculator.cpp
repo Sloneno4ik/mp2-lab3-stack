@@ -1,6 +1,8 @@
 ﻿#include "calculator.h"
-
+#include <string>
 #include <iostream>
+#include <cmath>
+#include <cstdio>
 using namespace std;
 
 int TCalculator::Prior(char c) {
@@ -75,7 +77,7 @@ double TCalculator::Calc() {
 			char *tmp;
 			double d = strtod(&postfix[i], &tmp);
 			st_d.Push(d);
-			i += tmp - &postfix[i] - 1; //ìá çäåñü íóæíî -1
+			i += tmp - &postfix[i] - 1; 
 		}
 		if (postfix[i] == '+' || postfix[i] == '-' || postfix[i] == '*' || postfix[i] == '/' || postfix[i] == '^') {
 			double rez, op1, op2 = st_d.Pop();
@@ -98,9 +100,9 @@ double TCalculator::Calc() {
 				st_d.Push(rez);
 				break;
 			case '^':
-				double rez = op1 + op2;
-				st_d.Push(rez);
-				break;
+			{double rez = pow(op1, op2);
+			st_d.Push(rez);
+			break; }
 			default: throw postfix[i];
 			}
 		}

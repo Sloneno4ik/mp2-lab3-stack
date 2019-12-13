@@ -1,6 +1,6 @@
 #pragma once
 
-#include "math.h"
+#include <cmath>
 #include <string>
 #include "stack.h"
 class TCalculator {
@@ -16,5 +16,6 @@ public:
 	std::string GetPostfix();
 	bool CheckBrackets();
 	void ToPostfix();
+	double strtod(char*, char**);
 	double Calc();
 };

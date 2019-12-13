@@ -13,7 +13,9 @@ TEST(TStack, can_insert_an_element_to_stack)
 }
 TEST(TStack, can_get_an_element_from_the_stack)
 {
-	TStack<int> bf(3);
+	TStack<int> bf(2);
+	bf.Push(2);
+	bf.Push(3);
 	ASSERT_NO_THROW(bf.Pop());
 }
 TEST(TStack, can_cleaR_stack)
@@ -24,6 +26,8 @@ TEST(TStack, can_cleaR_stack)
 }
 TEST(TStack, can_get_the_top_element)
 {
-	TStack<int> bf(3);
+	TStack<int> bf(2);
+	bf.Push(2);
+	bf.Push(3);
 	ASSERT_NO_THROW(bf.Top());
 }
