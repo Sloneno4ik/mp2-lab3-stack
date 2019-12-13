@@ -16,6 +16,5 @@ public:
 	std::string GetPostfix();
 	bool CheckBrackets();
 	void ToPostfix();
-	double strtod(char*, char**);
 	double Calc();
 };

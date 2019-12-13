@@ -31,3 +31,18 @@ TEST(TStack, can_get_the_top_element)
 	bf.Push(3);
 	ASSERT_NO_THROW(bf.Top());
 }
+TEST(TStack, checking_IsEmpty_function)
+{
+	TStack<int> bf(2);
+	EXPECT_EQ(bf.IsEmpty(), 1);
+	bf.Push(2);
+	EXPECT_NE(bf.IsEmpty(), 1);
+}
+TEST(TStack, checking_IsFull_function)
+{
+	TStack<int> bf(2);
+	EXPECT_NE(bf.IsFull(), 1);
+	bf.Push(2);
+	bf.Push(3);
+	EXPECT_EQ(bf.IsFull(), 1);
+}
